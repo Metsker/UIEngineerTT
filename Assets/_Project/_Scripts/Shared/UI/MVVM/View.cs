@@ -6,17 +6,18 @@ namespace _Project._Scripts.Shared.UI.MVVM
 {
     public abstract class View<T> : VisualElement, IDisposable where T : ViewModel
     {
-        protected readonly T ViewModel;
-        
-        public const string ViewUSS = "view";
-        
+        public readonly T ViewModel;
+
+        protected const string ContainerClass = "container";
+        private const string ViewClass = "view";
+
         protected DisposableBag DisposableBag;
 
         protected View(T viewModel)
         {
             ViewModel = viewModel;
             
-            AddToClassList(ViewUSS);
+            AddToClassList(ViewClass);
             dataSource = viewModel;
         }
 

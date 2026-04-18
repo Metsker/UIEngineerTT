@@ -1,12 +1,9 @@
-using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace _Project._Scripts.Shared.UI.Manipulators {
     public class DragManipulator : PointerManipulator
     {
-        public event Action<VisualElement, Vector2> OnDrop = delegate { };
-        
         private bool _isDragging;
         private Vector2 _offset;
 
@@ -54,7 +51,6 @@ namespace _Project._Scripts.Shared.UI.Manipulators {
             _isDragging = false;
             target.ReleasePointer(evt.pointerId);
             evt.StopPropagation();
-            OnDrop.Invoke(target, evt.position);
         }
     }
 }

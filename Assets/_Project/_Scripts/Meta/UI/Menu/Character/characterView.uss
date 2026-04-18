@@ -1,7 +1,7 @@
-@import "Includes/character.uss";
-@import "Includes/abilities.uss";
-@import "Includes/modifications.uss";
-@import "Includes/party.uss";
+@import "Panels/characterPanel.uss";
+@import "Panels/abilitiesPanel.uss";
+@import "Panels/modificationsPanel.uss";
+@import "Panels/partyPanel.uss";
 
 :root {
     flex-direction: row;
