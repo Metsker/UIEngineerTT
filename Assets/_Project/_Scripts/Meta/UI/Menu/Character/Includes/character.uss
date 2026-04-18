@@ -1,0 +1,121 @@
+.character {
+    width: 590px;
+    height: 944px;
+    top: 98px;
+    
+    transition-duration: var(--half-transition-dur);
+    transition-property: blur scale;
+}
+
+.character--hidden {
+    scale: 1.01;
+}
+
+.character__background {
+    background-image: url(/Assets/_Project/Graphics/Menu/Character/character_bg.png);
+    -unity-background-scale-mode: scale-to-fit;
+
+    position: absolute;
+    width: 552px;
+    height: 965px;
+    top: -10px;
+    left: 14px;
+}
+
+.character__portrait {
+    position: absolute;
+    width: 511px;
+    height: 734px;
+    rotate: 0.5deg;
+    top: 111px;
+    left: 32px;
+}
+
+.character__frame {
+    background-image: url(/Assets/_Project/Graphics/Menu/Character/paper_frame.png);
+    -unity-background-scale-mode: scale-to-fit;
+
+    position: absolute;
+
+    justify-content: flex-end;
+    width: 625px;
+    height: 845px;
+    rotate: -0.46deg;
+    top: 64px;
+    left: -22px;
+}
+
+.character__name {
+    background-image: url(/Assets/_Project/Graphics/Menu/Character/paper_header.png);
+
+    position: absolute;
+    width: 510px;
+    height: 63px;
+    rotate: 0.18deg;
+    top: 34px;
+    left: 32px;
+}
+
+.character__name__label {
+    position: absolute;
+    width: 472px;
+    height: 38px;
+    top: 47px;
+    left: 47px;
+
+    color: #34332E;
+    -unity-font-style: bold;
+    font-size: 33px;
+}
+
+.character__stats {
+    position: absolute;
+    top: 770px;
+    left: 46px;
+
+    flex-direction: row;
+    align-items: center;
+
+    background-color: #110F12;
+    width: 482px;
+    height: 56px;
+    rotate: -1.5deg;
+
+    opacity: 0.77;
+}
+
+.character__stats > * {
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    rotate: 1.5deg;
+    margin-right: 25px;
+}
+
+.character__stats Label {
+    font-size: 32;
+}
+
+.character__stats Image {
+    margin: 0 10px 0 7.5px;
+}
+
+.character__stats__hp > Label {
+    color: #E4593F;
+}
+
+.character__stats__hp > Image {
+    background-image: url(/Assets/_Project/Graphics/Menu/Character/health_icon.png);
+    width: 34px;
+    height: 34px;
+}
+
+.character__stats__armor > Label {
+    color: #7A7A7A;
+}
+
+.character__stats__armor > Image {
+    background-image: url(/Assets/_Project/Graphics/Menu/Character/armor_icon.png);
+    width: 27px;
+    height: 31px;
+}

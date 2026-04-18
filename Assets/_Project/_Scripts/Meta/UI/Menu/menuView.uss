@@ -1,0 +1,35 @@
+:root {
+    background-image: url("/Assets/_Project/Graphics/Menu/background.png");
+    background-color: black;
+    -unity-font-definition: var(--font-main);
+}
+
+.tabs {
+    background-image: url("/Assets/_Project/Graphics/Menu/tabs.png");
+    
+    position: absolute;
+    align-self: center;
+    width: 1020px;
+    height: 79px;
+    max-width: 1500px;
+    top: 15px;
+}
+
+.seal {
+    background-image: url("/Assets/_Project/Graphics/Menu/seal.png");
+    
+    position: absolute;
+    width: 191px;
+    height: 134px;
+    bottom: 0;
+    right: 85px;
+}
+
+.exit_button {
+    background-image: url("/Assets/_Project/Graphics/Menu/exit_button.png");
+    
+    position: absolute;
+    width: 76px;
+    height: 103px;
+    right: 0;
+}

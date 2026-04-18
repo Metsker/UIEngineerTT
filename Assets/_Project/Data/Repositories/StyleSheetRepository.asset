@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb5c5092be04461b77a413a2924fdba, type: 3}
+  m_Name: StyleSheetRepository
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.StyleSheetRepository
+  global: {fileID: 7433441132597879392, guid: a58e83989fab4742bdfc433d0c2d710c, type: 3}
+  meta: {fileID: 7433441132597879392, guid: 3aa7c8b39ba94ac181168737ac5b7975, type: 3}
+  menu: {fileID: 7433441132597879392, guid: fba0c504588c40cc8ceacf244141b6cd, type: 3}
+  character: {fileID: 7433441132597879392, guid: ca78599843104e9486c63ac9d1bc222c, type: 3}

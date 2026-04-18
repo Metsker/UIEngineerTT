@@ -1,0 +1,63 @@
+.party__container {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.party {
+    background-image: url("/Assets/_Project/Graphics/Menu/Character/party.png");
+
+    flex-direction: row;
+    
+    padding-top: 28px;
+    
+    width: 753px;
+    height: 115px;
+    left: -3px;
+}
+
+ButtonGroupContainer {
+    justify-content: center;
+
+    overflow: visible;
+}
+
+.party__member {
+    width: 57px;
+    height: 75px;
+    border-width: 1px;
+    border-color: #18280C;
+    margin: 0 6px;
+
+
+    justify-content: center;
+    align-items: center;
+    
+    transition-property: scale;
+    transition-duration: 0.1s;
+}
+
+.party__member:checked:hover {
+    scale: 1;
+}
+
+.party__member:hover {
+    scale: 1.1;
+}
+
+.party__member__frame {
+    background-image: url("/Assets/_Project/Graphics/Menu/Character/TeamPanel/Frame_selected.png");
+    position: absolute;
+    width: 75px;
+    height: 86px;
+    
+    scale: 1.2;
+    opacity: 0;
+    
+    transition-property: scale opacity;
+    transition-duration: var(--transition-dur);
+}
+
+.party__member:checked > .party__member__frame {
+    scale: 1;
+    opacity: 1;
+}

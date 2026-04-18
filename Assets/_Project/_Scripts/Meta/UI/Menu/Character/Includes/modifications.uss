@@ -1,0 +1,163 @@
+.modifications {
+    top: 122px;
+    margin-right: 77px;
+    flex-shrink: 0;
+    
+    -unity-font-definition: var(--font-secondary);
+}
+
+.modifications * {
+    transition-duration: 0.1s;
+    transition-property: filter border-color;
+}
+
+.modifications__header {
+    width: 292px;
+    height: 54px;
+    background-color: #A7A1B110;
+    margin-bottom: 1px;
+    justify-content: center;
+}
+
+.modifications__header > Label {
+    color: #9EA1BA;
+    -unity-font-style: bold;
+    font-size: 18px;
+}
+
+.modifications > ScrollView {
+    height: 70%;
+    width: 318;
+}
+
+.modifications__divider {
+    width: 292px;
+    height: 4px;
+    background-color: #547260;
+}
+
+.modification__item {
+    width: 292px;
+    height: 76px;
+    flex-direction: row;
+    padding: 8px 0;
+
+
+    transition-timing-function: ease-out-back;
+    transition-property: translate margin-bottom;
+    transition-duration: var(--transition-dur);
+}
+
+.modification__item:disabled {
+    opacity: 1;
+}
+
+.modification__item--hidden {
+    margin-bottom: 8px;
+}
+
+.modification__item:hover:enabled, .modification__item--compatible:enabled {
+    translate: 7.5px 0;
+}
+
+.modification__item--compatible > .modification__item__box {
+    border-color: rgba(0, 255, 89, 0.4);
+}
+
+.modification__item--incompatible > .modification__item__icon-bg {
+    filter: grayscale(100%);
+}
+
+.modification__draggable {
+    position: absolute;
+    width: 46px;
+    height: 69px;
+    align-items: center;
+    justify-content: center;
+
+    transition-property: scale;
+    transition-timing-function: ease-out-back;
+    transition-duration: 0.1s;
+}
+
+.modification__draggable--hidden {
+    scale: 0;
+}
+
+.modification__item__icon-bg {
+    position: absolute;
+    width: 46;
+    height: 60;
+    align-items: center;
+    justify-content: center;
+}
+
+.modification__item__box:disabled {
+    opacity: 0.5;
+}
+
+.modification__item__icon {
+    width: 33px;
+    height: 33px;
+}
+
+.modification__item__box {
+    width: 280px;
+    height: 60px;
+    left: 12px;
+    border-width: 1px;
+    background-color: rgba(217, 217, 217, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    justify-content: space-evenly;
+}
+
+.modification__item__label {
+    font-size: 24px;
+    color: white;
+    -unity-text-align: middle-left;
+
+    margin-left: 48px;
+}
+
+.modification__item__sublabel {
+    font-size: 14px;
+    color: #FFFFFFB2;
+    
+    margin-left: 48px;
+    -unity-text-align: middle-left;
+}
+
+Scroller {
+    margin-left: 10px;
+
+    width: 12px;
+    flex-grow: 1;
+}
+
+ScrollerSlider {
+    width: auto;
+    min-width: auto;
+}
+
+RepeatButton {
+    display: none;
+}
+
+.unity-base-slider__dragger-border {
+    display: none;
+}
+
+.unity-base-slider__tracker {
+    width: 4px;
+    border-radius: 1px;
+    background-color: #49634B80;
+    left: 4px;
+}
+
+.unity-base-slider__dragger {
+    background-image: url("/Assets/_Project/Graphics/Menu/Character/scroll_handle.png");
+    background-color: transparent;
+    width: 12px;
+    left: 0;
+}

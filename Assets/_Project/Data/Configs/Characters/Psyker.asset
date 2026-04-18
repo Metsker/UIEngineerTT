@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcce5bb81f864d85991a0faa14564239, type: 3}
+  m_Name: Psyker
+  m_EditorClassIdentifier: Assembly-CSharp::_Project._Scripts.Meta.Data.Character.CharacterData
+  characterName: Psyker
+  portrait: {fileID: 21300000, guid: 87ec657cfbe86dc5f8506e1adc220748, type: 3}
+  partyIcon: {fileID: 21300000, guid: 27def3937bf692596bfb75ea52dbcaf4, type: 3}
+  hp: 50
+  armor: 1
+  abilities:
+  - {fileID: 11400000, guid: e8454bcafdce65f6abfcc32f80359d43, type: 2}
+  - {fileID: 11400000, guid: 0327e5d466b5bdc22b70a18938f85206, type: 2}
+  modifications:
+  - {fileID: 11400000, guid: e6f474913be0b21a8963e4f3cca1609c, type: 2}
+  - {fileID: 11400000, guid: 5f6bb9edd81fde731ad4b0a65ecdd42f, type: 2}
+  - {fileID: 11400000, guid: 2c12e6352513ffb03a77e6c5beb1c4e2, type: 2}
+  - {fileID: 11400000, guid: fa55d074c45ddf8998286344b7ed0955, type: 2}

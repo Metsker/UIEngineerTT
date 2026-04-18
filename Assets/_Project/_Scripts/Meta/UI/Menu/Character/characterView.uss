@@ -1,0 +1,61 @@
+@import "Includes/character.uss";
+@import "Includes/abilities.uss";
+@import "Includes/modifications.uss";
+@import "Includes/party.uss";
+
+:root {
+    flex-direction: row;
+    --transition-dur: 0.2s;
+    --half-transition-dur: 0.1s;
+}
+
+.divider {
+    position: absolute;
+}
+
+.divider--top {
+    background-image: url("/Assets/_Project/Graphics/Menu/Character/bg-lines_2.png");
+    width: 1272px;
+    height: 1px;
+    right: 92px;
+}
+
+.divider--top-1 {
+    top: 180px;
+    opacity: 0.5;
+}
+
+.divider--top-2 {
+    top: 184px;
+    opacity: 0.25;
+}
+
+.divider--right {
+    background-image: url("/Assets/_Project/Graphics/Menu/Character/bg-lines_1.png");
+    -unity-background-scale-mode: scale-and-crop;
+    width: 36px;
+    right: 373px;
+    opacity: 0.7;
+}
+
+.divider--right-1 {
+    height: 737px;
+    top: 154px;
+
+}
+
+.divider--right-2 {
+    height: 65px;
+    top: 116px;
+}
+
+.divider--bottom {
+    width: 1298px;
+    height: 0;
+    bottom: 129px;
+    right: 63px;
+    border-color: #37523E;
+    border-width: 1px;
+}
+
+

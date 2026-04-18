@@ -1,0 +1,112 @@
+.abilities {
+    top: 122px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.abilities * {
+    transition-duration: 0.1s;
+    transition-property: filter scale;
+}
+
+.abilities__header {
+    margin-top: 12px;
+
+    color: var(--green);
+    -unity-font-style: bold;
+    font-size: 27px;
+}
+
+.abilities__grid {
+    width: 100%;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: flex-start;
+    align-content: flex-start;
+    
+    margin-top: 41px;
+}
+
+.ability__with-modification{
+    
+}
+
+.ability__item {
+    flex-direction: row;
+    height: 178px;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 27px 0;
+    margin-right: 10px;
+
+    transition-timing-function: ease-out-back;
+    transition-duration: var(--transition-dur);
+    transition-property: filter scale margin-bottom;
+}
+
+.ability__item--hidden {
+    margin-bottom: 27px;
+}
+
+.ability__item--compatible .ability__background {
+    filter: invert(1%);
+    scale: 1.05;
+}
+
+.ability__with-modification.ability__item--compatible .ability__modification--empty {
+    filter: invert(0);
+}
+
+.ability__item--compatible .ability__modification--empty {
+    filter: invert(2%) tint(#00ff59);
+}
+
+.ability__item--compatible .ability__icon {
+    
+}
+
+.ability__item--incompatible {
+    filter: grayscale(100%);
+}
+
+.ability__item:hover {
+    scale: 1.05;
+}
+
+.ability__background {
+    background-image: url("/Assets/_Project/Graphics/Menu/Character/Abilities/AbilityBg.png");
+    position: absolute;
+    width: 193px;
+    height: 124px;
+
+    right: 70px;
+}
+
+.ability__content {
+    flex-direction: row;
+}
+
+.ability__modification--empty {
+    background-image: url("/Assets/_Project/Graphics/Menu/Character/Modifications/Empty.png");
+    width: 39px;
+    height: 69px;
+}
+
+.ability__icon {
+    width: 69px;
+    height: 69px;
+}
+
+.ability__label {
+    -unity-font-definition: var(--font-secondary);
+    font-size: 20px;
+    color: #BEBEBE;
+    width: 100px;
+    height: 70px;
+    margin-left: 15px;
+    white-space: normal;
+    -unity-text-align: middle-left;
+}

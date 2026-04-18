@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcce5bb81f864d85991a0faa14564239, type: 3}
+  m_Name: JaeHeydari
+  m_EditorClassIdentifier: Assembly-CSharp::_Project._Scripts.Meta.Data.Character.CharacterData
+  characterName: Jae Heydari
+  portrait: {fileID: 21300000, guid: d06ea276c0a7ff30e8bd504c45b9bfbb, type: 3}
+  partyIcon: {fileID: 21300000, guid: d536564efb4edee00a203c83e6ec9f2d, type: 3}
+  hp: 115
+  armor: 10
+  abilities:
+  - {fileID: 11400000, guid: 5b35adcf52445df558dcd87b596a41eb, type: 2}
+  - {fileID: 11400000, guid: 8adb3e54726a8be79bc5f57849214152, type: 2}
+  - {fileID: 11400000, guid: 0fac445f61e4572518b7ba249da08328, type: 2}
+  - {fileID: 11400000, guid: 24634fb27bee6c22b9cbdc0a6cfff87e, type: 2}
+  - {fileID: 11400000, guid: 617b457d03f550939b4271c4cf730157, type: 2}
+  - {fileID: 11400000, guid: 80704439d726c377984f3bcae119ffb4, type: 2}
+  - {fileID: 11400000, guid: 2c985bf5c7787b3f08fd9811cc16cfe4, type: 2}
+  - {fileID: 11400000, guid: b4e960b0261d5ab46a03d02050bb3a5f, type: 2}
+  - {fileID: 11400000, guid: 7ec14999e056ccef096c0b1f0a03707f, type: 2}
+  - {fileID: 11400000, guid: d37b76044c15b9bd5a98b37d337995b9, type: 2}
+  - {fileID: 11400000, guid: 4fe7df8f1e6aa9a7c86ae6621334ecef, type: 2}
+  - {fileID: 11400000, guid: c2576e7296c16d29d80b4ddb224b42b4, type: 2}
+  - {fileID: 11400000, guid: 5b35adcf52445df558dcd87b596a41eb, type: 2}
+  - {fileID: 11400000, guid: 8adb3e54726a8be79bc5f57849214152, type: 2}
+  - {fileID: 11400000, guid: 0fac445f61e4572518b7ba249da08328, type: 2}
+  - {fileID: 11400000, guid: 24634fb27bee6c22b9cbdc0a6cfff87e, type: 2}
+  modifications:
+  - {fileID: 11400000, guid: 7bc1563df8be0228cbe481c81a6291d0, type: 2}
+  - {fileID: 11400000, guid: cec71a7c5228652398f0d4fa07f9feb5, type: 2}
+  - {fileID: 11400000, guid: aae624dfb7be6d70881da25bd1484834, type: 2}
+  - {fileID: 11400000, guid: 48d465aae08b04f0f8792d3a24d86a33, type: 2}
+  - {fileID: 11400000, guid: c2ade0d480cda3cc8b664121e022bc80, type: 2}
+  - {fileID: 11400000, guid: 60e344f95d06f1d1aaf563c80e280a39, type: 2}
+  - {fileID: 11400000, guid: e6f474913be0b21a8963e4f3cca1609c, type: 2}
+  - {fileID: 11400000, guid: 5f6bb9edd81fde731ad4b0a65ecdd42f, type: 2}
