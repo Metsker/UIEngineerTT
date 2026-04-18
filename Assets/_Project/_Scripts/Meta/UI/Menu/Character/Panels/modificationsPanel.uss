@@ -69,10 +69,6 @@
     filter: grayscale(100%);
 }
 
-.modification__item--bin > .modification__item__box {
-    border-color: rgba(255, 0, 0, 0.4);
-}
-
 .modification__draggable {
     position: absolute;
     width: 46px;

@@ -10,7 +10,6 @@ namespace _Project._Scripts.Meta.UI.Menu.Character.Panels
     {
         public const string ModificationItemCompatibleClass = "modification__item--compatible";
         public const string ModificationItemIncompatibleClass = "modification__item--incompatible";
-        public const string ModificationItemBinClass = "modification__item--bin";
         public const string ModificationDraggableClass = "modification__draggable";
         public const string ModificationDraggableHiddenClass = "modification__draggable--hidden";
         private const string ModificationsClass = "modifications";
@@ -171,18 +170,6 @@ namespace _Project._Scripts.Meta.UI.Menu.Character.Panels
         {
             foreach (VisualElement modification in ScrollView.contentContainer.Children())
                 HideCompatibility(modification);
-        }
-
-        public void ShowBin()
-        {
-            foreach (VisualElement modification in ScrollView.contentContainer.Children())
-                modification.AddToClassList(ModificationItemBinClass);
-        }
-        
-        public void HideBin()
-        {
-            foreach (VisualElement modification in ScrollView.contentContainer.Children())
-                modification.RemoveFromClassList(ModificationItemBinClass);
         }
     }
 }

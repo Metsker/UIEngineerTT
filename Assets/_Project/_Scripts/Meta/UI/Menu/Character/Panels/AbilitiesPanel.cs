@@ -166,29 +166,24 @@ namespace _Project._Scripts.Meta.UI.Menu.Character.Panels
         {
             ShowCompatibility(data);
             _view.ModificationsPanel.HideCompatibility();
-            _view.ModificationsPanel.ShowBin();
         }
 
         public void OnModificationCaptureOut(PointerCaptureOutEvent evt, [CanBeNull] VisualElement originAbility)
         {
             VisualElement target = (VisualElement)evt.target;
             Vector2 dropPosition = target.LocalToWorld(target.layout.center);
-            _view.ModificationsPanel.HideBin();
             
-            if (OverModifications(target, dropPosition))
+            if (DroppedOverModifications(target, dropPosition))
                 return;
             
             ModificationData modificationData = (ModificationData)target.userData;
-            bool success = false;
+            bool resolved = false;
             
             foreach (VisualElement ability in Grid.Children())
             {
                 HideCompatibility(ability);
                 
-                if (success) 
-                    continue;
-                
-                if (ability.ClassListContains(AbilityWithModificationClass))
+                if (resolved) 
                     continue;
 
                 VisualElement bg = ability.Q(className: AbilityBackgroundClass);
@@ -198,18 +193,25 @@ namespace _Project._Scripts.Meta.UI.Menu.Character.Panels
 
                 AbilityData abilityData = (AbilityData)ability.userData;
 
-                if (!abilityData.compatibleModifications.HasFlag(modificationData.ModificationType))
+                if (!abilityData.compatibleModifications.HasFlag(modificationData.ModificationType) || ability.ClassListContains(AbilityWithModificationClass))
+                {
+                    if (originAbility != null)
+                    {
+                        BindModificationToAbility(target, originAbility, abilityData, modificationData);
+                        resolved = true;
+                    }
                     continue;
+                }
 
                 BindModificationToAbility(target, ability, abilityData, modificationData);
-                success = true;
+                resolved = true;
             }
 
-            if (!success)
-                ResetModification(target, originAbility, modificationData);
+            if (!resolved) 
+                RemoveDraggable(target);
         }
 
-        private bool OverModifications(VisualElement target, Vector2 dropPosition)
+        private bool DroppedOverModifications(VisualElement target, Vector2 dropPosition)
         {
             if (!_view.ModificationsPanel.ScrollView.contentContainer.worldBound.Contains(dropPosition))
                 return false;
@@ -241,15 +243,6 @@ namespace _Project._Scripts.Meta.UI.Menu.Character.Panels
             slot.Add(modification);
             modification.style.translate = new StyleTranslate();
             AddDetachCallback(modification, ability);
-        }
-
-        private void ResetModification(VisualElement target, [CanBeNull] VisualElement originAbility,
-            ModificationData modificationData)
-        {
-            if (originAbility != null)
-                BindModificationToAbility(target, originAbility, (AbilityData)originAbility.userData, modificationData);
-            else
-                RemoveDraggable(target);
         }
 
         private static void RemoveDraggable(VisualElement target)
