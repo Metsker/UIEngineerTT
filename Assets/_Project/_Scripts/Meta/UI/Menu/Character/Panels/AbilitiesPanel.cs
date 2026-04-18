@@ -166,15 +166,21 @@ namespace _Project._Scripts.Meta.UI.Menu.Character.Panels
         {
             ShowCompatibility(data);
             _view.ModificationsPanel.HideCompatibility();
+            _view.ModificationsPanel.ShowBin();
         }
 
         public void OnModificationCaptureOut(PointerCaptureOutEvent evt, [CanBeNull] VisualElement originAbility)
         {
             VisualElement target = (VisualElement)evt.target;
             Vector2 dropPosition = target.LocalToWorld(target.layout.center);
-            ModificationData modificationData = (ModificationData)target.userData;
+            _view.ModificationsPanel.HideBin();
             
+            if (OverModifications(target, dropPosition))
+                return;
+            
+            ModificationData modificationData = (ModificationData)target.userData;
             bool success = false;
+            
             foreach (VisualElement ability in Grid.Children())
             {
                 HideCompatibility(ability);
@@ -198,9 +204,27 @@ namespace _Project._Scripts.Meta.UI.Menu.Character.Panels
                 BindModificationToAbility(target, ability, abilityData, modificationData);
                 success = true;
             }
-            
+
             if (!success)
                 ResetModification(target, originAbility, modificationData);
+        }
+
+        private bool OverModifications(VisualElement target, Vector2 dropPosition)
+        {
+            if (!_view.ModificationsPanel.ScrollView.contentContainer.worldBound.Contains(dropPosition))
+                return false;
+            
+            RemoveDraggable(target);
+            foreach (VisualElement modification in _view.ModificationsPanel.ScrollView.contentContainer.Children())
+            {
+                if (!modification.enabledSelf || !modification.worldBound.Contains(dropPosition)) 
+                    continue;
+                    
+                ShowCompatibility((ModificationData)modification.userData);
+                return true;
+            }
+            HideCompatibility();
+            return true;
         }
 
         private void BindModificationToAbility(
@@ -225,11 +249,14 @@ namespace _Project._Scripts.Meta.UI.Menu.Character.Panels
             if (originAbility != null)
                 BindModificationToAbility(target, originAbility, (AbilityData)originAbility.userData, modificationData);
             else
-            {
-                target.AddToClassList(ModificationDraggableHiddenClass);
-                target.RegisterCallbackOnce<TransitionEndEvent, VisualElement>((_, t) =>
-                    t.RemoveFromHierarchy(), target);
-            }
+                RemoveDraggable(target);
+        }
+
+        private static void RemoveDraggable(VisualElement target)
+        {
+            target.AddToClassList(ModificationDraggableHiddenClass);
+            target.RegisterCallbackOnce<TransitionEndEvent, VisualElement>((_, t) =>
+                t.RemoveFromHierarchy(), target);
         }
     }
 }
